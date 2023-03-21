@@ -37,7 +37,16 @@ export class AppController {
   @UseGuards(JwtAuthGuard, RolesGuard)
   @ApiBearerAuth("token")
   @Get("auth/profile")
-  getProfile(@Request() req) {
+  getAdminProfile(@Request() req) {
+    const getData = req.user;
+    return getData;
+  }
+
+  @HasRoles(Roles.User)
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @ApiBearerAuth("token")
+  @Get("auth/profile")
+  getUserProfile(@Request() req) {
     const getData = req.user;
     return getData;
   }
