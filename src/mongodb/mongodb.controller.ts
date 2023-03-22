@@ -17,7 +17,7 @@ import { HasRoles } from "src/auth/permission/hasRoles.decorator";
 import { RolesGuard } from "src/auth/permission/roles.guard";
 import { Roles } from "src/users/user.enum";
 
-@Controller("mongodb")
+@Controller("task")
 export class MongoDBController {
   constructor(private readonly mongoDB: MongoDBService) {}
 

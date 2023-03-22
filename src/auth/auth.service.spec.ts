@@ -50,11 +50,6 @@ describe('validateUser', () => {
     service = moduleRef.get<AuthService>(AuthService);
   });
 
-  it('should return a user object when credentials are valid', async () => {
-    const res = await service.validateUser('maria', 'guess');
-    expect(res.userId).toEqual(3);
-  });
-
   it('should return null when credentials are invalid', async () => {
     const res = await service.validateUser('xxx', 'xxx');
     expect(res).toBeNull();

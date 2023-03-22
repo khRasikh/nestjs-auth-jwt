@@ -11,8 +11,8 @@ export class UsersService {
     this.users = [
       {
         userId: 1,
-        username: 'rasikh',
-        password: 'rasikh123',
+        username: 'secureapp.me@gmail.com',
+        password: 'secure123',
         roles: [Roles.Admin]
       },
       {

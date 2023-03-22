@@ -9,7 +9,7 @@ import {
 import { AuthService } from "./auth/auth.service";
 import { JwtAuthGuard } from "./auth/guards/jwt-auth.guard";
 import { LocalAuthGuard } from "./auth/guards/local-auth.guard";
-import { LoginDto } from "./users/dto/user.dto";
+import { LoginDto } from "./users/dto/login.dto";
 import { ApiBearerAuth } from "@nestjs/swagger";
 import { RegisterDto } from "./users/dto/register.dto";
 import { HasRoles } from "./auth/permission/hasRoles.decorator";
@@ -22,7 +22,6 @@ export class AppController {
 
   @Post("auth/register")
   async register(@Body() data: RegisterDto) {
-    console.log(data);
     return this.authService.register(data);
   }
 

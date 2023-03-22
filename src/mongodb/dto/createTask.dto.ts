@@ -21,12 +21,12 @@ export class CreateTaskDto {
   })
   name: string;
 
-  @ApiProperty({default: false})
+  @ApiProperty({ default: false })
   @IsNotEmpty()
   @IsBoolean()
   status: boolean;
 
-  @ApiProperty({default: new Date()})
+  @ApiProperty({ default: new Date() })
   @IsNotEmpty()
   @IsString()
   date: string;
